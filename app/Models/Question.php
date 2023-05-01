@@ -16,6 +16,6 @@ class Question extends Model
     }
     public function category()
     {
-        // return $this->belongsTo(QuestionCategory::class, 'group_id', 'id')->orderBy('id', 'asc');
+        return $this->belongsTo(QuestionCategory::class, 'question_category_id', 'id');
     }
 }
