@@ -29,7 +29,7 @@ class QuizController extends Controller
 
         if ($categoriesIds) {
             foreach ($categoriesIds as $cat_id) {
-                array_push($questions, Question::where('question_category_id', $cat_id)->inRandomOrder()->limit(($total_quiz/$per_quiz))->get());
+                array_push($questions, Question::where('question_category_id', $cat_id)->inRandomOrder()->limit(($per_quiz))->get());
             }
         }
         $questions = Arr::flatten($questions);
